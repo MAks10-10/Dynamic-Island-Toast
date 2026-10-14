@@ -30,14 +30,14 @@ A SwiftUI toast that morphs out of the Dynamic Island. It adapts to the device: 
 In Xcode: **File > Add Package Dependencies...** and enter:
 
 ```
-https://github.com/MAks10-10/DynamicIslandToast
+https://github.com/MAks10-10/Dynamic-Island-Toast
 ```
 
 Or add it to your `Package.swift`:
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/MAks10-10/DynamicIslandToast", from: "1.0.0")
+    .package(url: "https://github.com/MAks10-10/Dynamic-Island-Toast", from: "1.0.0")
 ]
 ```
 
