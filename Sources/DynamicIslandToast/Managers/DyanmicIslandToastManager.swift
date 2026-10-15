@@ -1,6 +1,6 @@
 //
 //
-// DyanmicIslandToastManager.swift
+// DynamicIslandToastManager.swift
 // DynamicIslandToast
 //
 // Created by Shubh Magdani 
@@ -11,8 +11,8 @@ import SwiftUI
 
 
 @MainActor
-final public class DyanmicIslandToastManager: ObservableObject {
-    public static let shared = DyanmicIslandToastManager()
+final public class DynamicIslandToastManager: ObservableObject {
+    public static let shared = DynamicIslandToastManager()
 
     @Published private(set) var isPresented: Bool = false
     @Published private(set) var isGradientNeeded: Bool = true

@@ -54,41 +54,35 @@ Import the package and call the shared manager from anywhere on the main actor. 
 import SwiftUI
 import DynamicIslandToast
 
-struct ContentView: View {
-    var body: some View {
-        VStack(spacing: 16) {
-            Button("Show Success Toast") {
-                DyanmicIslandToastManager.shared.show(
-                    IslandModel(
-                        title: "Success",
-                        message: "Your changes have been saved.",
-                        type: .success
-                    )
-                )
-            }
+Button("Show Success Toast") {
+    DynamicIslandToastManager.shared.show(
+        IslandModel(
+            type: .success,
+            title: "Success",
+            message: "Your changes have been saved."
+        )
+    )
+}
 
-            Button("Show Error Toast") {
-                DyanmicIslandToastManager.shared.show(
-                    IslandModel(
-                        title: "Error",
-                        message: "Something went wrong.",
-                        type: .error
-                    )
-                )
-            }
-        }
-    }
+Button("Show Error Toast") {
+    DynamicIslandToastManager.shared.show(
+        IslandModel(
+            type: .error,
+            title: "Error",
+            message: "Something went wrong."
+        )
+    )
 }
 ```
 
 ### Custom type
 
 ```swift
-DyanmicIslandToastManager.shared.show(
+DynamicIslandToastManager.shared.show(
     IslandModel(
+        type: .custom(color: .teal, icon: "star.fill"),
         title: "Custom",
-        message: "Your own color and SF Symbol.",
-        type: .custom(color: .teal, icon: "star.fill")
+        message: "Your own color and SF Symbol."
     )
 )
 ```
@@ -96,7 +90,7 @@ DyanmicIslandToastManager.shared.show(
 ### Duration and gradient
 
 ```swift
-DyanmicIslandToastManager.shared.show(
+DynamicIslandToastManager.shared.show(
     toast,
     duration: 4.0,          // seconds, default 2.5
     isGradientNeeded: false // solid black instead of tinted gradient
@@ -111,7 +105,7 @@ Users can swipe up on the toast to dismiss it. The toast also dismisses itself a
 
 | Symbol | Description |
 | --- | --- |
-| `DyanmicIslandToastManager.shared` | Singleton that presents and dismisses toasts |
+| `DynamicIslandToastManager.shared` | Singleton that presents and dismisses toasts |
 | `show(_:duration:isGradientNeeded:)` | Presents a toast; replaces the current one if already showing |
 | `IslandModel` | Toast content: title, message and type |
 | `ToastType` | `.success`, `.error`, `.info`, `.warning`, `.custom(color:icon:)` |

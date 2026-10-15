@@ -11,7 +11,7 @@ import SwiftUI
 
 
 public struct DynamicIslandViewRoot: View {
-    @ObservedObject var manager = DyanmicIslandToastManager.shared
+    @ObservedObject var manager = DynamicIslandToastManager.shared
     @State private var measuredContentSize: CGSize = .zero
     @State private var dragOffset: CGFloat = 0
     @State private var lastDragUpdate: Date = .distantPast
