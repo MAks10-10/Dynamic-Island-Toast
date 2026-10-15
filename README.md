@@ -1,5 +1,10 @@
 # DynamicIslandToast
 
+![Swift](https://img.shields.io/badge/Swift-5.9-orange)
+![Platform](https://img.shields.io/badge/platform-iOS%2017%2B-blue)
+![License](https://img.shields.io/badge/license-MIT-green)
+![SPM](https://img.shields.io/badge/SPM-compatible-brightgreen)
+
 A SwiftUI toast that morphs out of the Dynamic Island. It adapts to the device: devices with a Dynamic Island get the pill-morph animation, notch devices get a full-width drop-down, and home-button devices get a slide-down banner.
 
 <p align="center">
