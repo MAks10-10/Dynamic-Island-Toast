@@ -110,17 +110,7 @@ Users can swipe up on the toast to dismiss it. The toast also dismisses itself a
 | `IslandModel` | Toast content: title, message and type |
 | `ToastType` | `.success`, `.error`, `.info`, `.warning`, `.custom(color:icon:)` |
 
-## How it works
 
-The screen type is detected from the top safe-area inset:
-
-| Safe area top | Style |
-| --- | --- |
-| below 24 | Plain banner (home-button devices) |
-| 24 to 55 | Notch, full-width drop-down |
-| 55 and above | Dynamic Island morph |
-
-The toast lives in a `UIWindow` subclass with a pass-through `hitTest`, so only the toast itself captures touches.
 
 ## License
 
